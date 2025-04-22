@@ -48,7 +48,7 @@ PtTime timeNow(void);
  * @param hour Hour value.
  * @param minute Minute value.
  * @param second Second value.
- * @return A pointer to a new Time instance, or NULL if values are invalid.
+ * @return A pointer to a new Time instance, or NULL if values are invalid or there is no memory.
  */
 PtTime timeCreate(int hour, int minute, int second);
 
@@ -103,7 +103,7 @@ int timeToSeconds(PtTime t, int *totalSeconds);
  * 
  * @param t1 First Time operand.
  * @param t2 Second Time operand.
- * @return A new Time instance representing the sum, or NULL if any argument is NULL.
+ * @return A new Time instance representing the sum, or NULL if any argument is NULL or there is no memory.
  */
 PtTime timeAdd(PtTime t1, PtTime t2);
 
@@ -114,7 +114,7 @@ PtTime timeAdd(PtTime t1, PtTime t2);
  * 
  * @param t1 First Time operand.
  * @param t2 Second Time operand.
- * @return A new Time instance representing the difference, or NULL if any argument is NULL.
+ * @return A new Time instance representing the difference, or NULL if any argument is NULL or there is no memory.
  */
 PtTime timeDiff(PtTime t1, PtTime t2);
 
